@@ -1,0 +1,82 @@
+#diy_bg {
+	padding-bottom: 100px;
+    .title {
+        width: auto;
+        height: 160px;
+		text-align: center;
+        /*background-image: url('~w/diy/title.png');*/
+        .text {
+            width: 424px;
+            background-position: center;
+            height: 44px;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-image: url('~w/diy/title_text.png');
+        }
+        .man {
+            width: 210px;
+            height: 100%;
+            display: inline-block;
+            background-image: url('~w/diy/title_man.png');
+        }
+    }
+    .youtube_player_container {
+        width: 737px;
+		margin: 0 auto;
+    }
+    .line {
+        // margin-top: 10px;
+        // margin-bottom: 10px;
+        width: 598px;
+        height: 20px;
+        background-image: url('~w/diy/line.png');
+		margin: 10px auto;
+    }
+    .diy_list {
+        width: 600px;
+        height: 132px;
+        font-size: 0;
+		margin: 0 auto;
+        .list {
+            display: inline-block;
+            width: 120px;
+            height: 132px;
+            background-image: url('~w/diy/list.png');
+            background-repeat: no-repeat;
+            @for $i from 1 through 5 {
+                &.list_#{$i} {
+                    background-position: calc(120px - 120px*#{$i}) 0px;
+                }
+            }
+            &.ON {
+                background-image: url('~w/diy/border.png');
+            }
+        }
+    }
+    @media screen and (max-width: 645px) {
+        >div {
+            margin: 0 auto;
+        }
+        .youtube_player_container {
+            width: 540px;
+        }
+        .title {
+            width: 538px;
+            height: 160px;
+            background-image: url('~m/diy/title.png');
+            .text {
+                display: none;
+            }
+            .man {
+                display: none;
+            }
+        }
+        .line {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 540px;
+            height: 26px;
+            background-image: url('~m/diy/line.png');
+        }
+    }
+}

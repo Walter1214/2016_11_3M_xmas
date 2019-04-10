@@ -1,0 +1,48 @@
+#okok_bg {
+    .title {
+        width: 250px;
+        height: 56px;
+        background-image: url('~w/message/okok/title.png');
+		margin: 0 auto;
+    }
+    .content {
+        width: 731px;
+        height: 245px;
+        // margin-top: 40px;
+		margin: 40px auto 0;
+        background-image: url('~w/message/okok/content.png');
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .gotodiy_btn {
+            margin-top: 22%;
+            width: 133px;
+            height: 39px;
+            display: block;
+            background-image: url('~w/message/okok/gotodiy_btn.png');
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #okok_bg {
+        .title {
+            width: 312px;
+            height: 70px;
+            background-image: url('~m/message/okok/title.png');
+        }
+        .content {
+            width: 540px;
+            height: 466px;
+            background-image: url('~m/message/okok/content.png');
+            .gotodiy_btn {
+                margin-top: 60%;
+                width: 201px;
+                height: 60px;
+                background-image: url('~m/message/okok/gotodiy_btn.png');
+            }
+        }
+    }
+}

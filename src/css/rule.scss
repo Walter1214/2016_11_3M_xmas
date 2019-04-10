@@ -1,0 +1,150 @@
+#rule_bg {
+    display: block;
+    &>div {
+        margin: 0 auto;
+    }
+    .title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 250px;
+        height: 56px;
+        background-image: url('~w/rule/title.png');
+        position: relative;
+        .list_btn {
+            display: block;
+            width: 126px;
+            height: 37px;
+            background-image: url('~w/rule/list_btn.png');
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: 298px;
+        }
+    }
+    .bookmark_list {
+        width: 848px;
+        height: 50px;
+        font-size: 0;
+        .bookmark {
+            display: inline-block;
+            width: 424px;
+            height: 52px;
+            background-image: url('~w/rule/bookmark.png');
+            background-repeat: no-repeat;
+            &.rule {
+                background-position: 0px -52px;
+                &.ON {
+                    background-position-y: 0px;
+                }
+            }
+            &.invoice {
+                background-position: -424px 0px;
+                &.ON {
+                    background-position-y: -52px;
+                }
+            }
+        }
+    }
+    .bookmark_space {
+        width: 788px;
+        // height: 2461px;
+        height: auto;
+        padding: 30px;
+        position: relative;
+        /*overflow-x: hidden;
+        overflow-y: scroll;*/
+        background-color: #AB2C2E;
+        .rule_content {
+            width: 754px;
+            height: 2481px;
+            margin-bottom: 40px;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-size: cover;
+            background-image: url('~w/rule/rule_content.png');
+            &.invoice_content {
+                height: 2461px;
+                background-image: url('~w/rule/invoice_content.png');
+            }
+        }
+        .btn_top {
+            display: block;
+            width: 97px;
+            height: 49px;
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, 0);
+            background-image: url('~w/rule/btn_top.png')
+        }
+    }
+    @media screen and (max-width: 645px) {
+        .title {
+            margin-top: 0;
+            margin-bottom: 30px;
+            margin-left: 75px;
+            width: 312px;
+            height: 70px;
+            background-image: url('~m/rule/title.png');
+            .list_btn {
+                margin-left: 0;
+                left: 335px;
+                top: 10px;
+                width: 169px;
+                height: 50px;
+                background-image: url('~m/rule/list_btn.png');
+            }
+        }
+        .bookmark_list {
+            width: 537px;
+            height: 50px;
+            font-size: 0;
+            .bookmark {
+                display: inline-block;
+                width: 268px;
+                height: 52px;
+                background-image: url('~m/rule/bookmark.png');
+                background-repeat: no-repeat;
+                &.rule {
+                    background-position: 0px -52px;
+                    &.ON {
+                        background-position-y: 0px;
+                    }
+                }
+                &.invoice {
+                    background-position: -268px 0px;
+                    &.ON {
+                        background-position-y: -52px;
+                    }
+                }
+            }
+        }
+        .bookmark_space {
+            width: 497px;
+            // height: 5480px;
+            height: auto;
+            padding: 20px;
+            /*overflow-x: hidden;
+        overflow-y: scroll;*/
+            background-color: #AB2C2E;
+            .rule_content {
+                width: 500px;
+                height: 5254px;
+                margin-bottom: 100px;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                background-size: cover;
+                background-image: url('~m/rule/rule_content.png');
+                &.invoice_content {
+                    height: 5360px;
+                    background-image: url('~m/rule/invoice_content.png');
+                }
+            }
+            .btn_top {
+                width: 160px;
+                height: 80px;
+                background-image: url('~m/rule/btn_top.png')
+            }
+        }
+    }
+}

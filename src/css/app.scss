@@ -1,0 +1,118 @@
+$num: 2%;
+$m_num:5%;
+input,
+textarea {
+    font-family: Microsoft JhengHei;
+}
+
+*:focus {
+    outline: none;
+}
+
+.app-root {
+    font-family: Microsoft JhengHei;
+    // height: 100%;
+    width: 100%;
+    background-image: url('~w/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    min-width: 1000px;
+    max-width: 1920px;
+    // min-height: 700px;
+    // max-height: 100%;
+    min-height: 100%;
+    /*@media screen and (min-width: 645px) {}*/
+    main {
+        // position: absolute;
+        position: relative;
+        // top: 0;
+        // left: 0;
+        // height: 100%;
+        width: 100%;
+        .view {
+            // height: 100%;
+            width: 100%;
+            position: relative;
+            padding-top: 130px;
+            // @media screen and (min-width: 645px) {
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     flex-direction: column;
+            //     padding-top: 0;
+            // }
+        }
+    }
+    .logo_3m {
+        position: fixed;
+        display: block;
+        width: 175px;
+        height: 40px;
+        top: $num;
+        left: $num;
+        background-image: url('~w/3m_logo.png');
+        z-index: 15;
+    }
+    .menu_open {
+        position: fixed;
+        display: block;
+        right: $num;
+        top: $num;
+        width: 52px;
+        height: 66px;
+        background-image: url('~w/menu/menu.png');
+        z-index: 5;
+        // &:hover {
+        //     background-image: url('~w/menu/menu_hover.png');
+        // }
+    }
+    .receipt {
+        // position: absolute;
+        position: fixed;
+        display: block;
+        width: 148px;
+        height: 155px;
+        right: $num;
+        // bottom: 40%;
+        // top: 440px;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-image: url('~w/invoice.png');
+        z-index: 5;
+    }
+    .pointer {
+        cursor: pointer;
+    }
+    @media screen and (min-width: 646px) {
+        .menu_open:hover {
+            background-image: url('~w/menu/menu_hover.png');
+        }
+    }
+    @media screen and (max-width: 645px) {
+        /*border: 2px solid blue;*/
+        min-width: 640px !important;
+        // min-height: 1000px !important;
+        background-image: url('~m/bg.jpg');
+        .menu_open {
+            width: 40px;
+            height: 31px;
+            top: 34px;
+            right: 33px;
+            background-image: url('~m/menu/menu.png');
+            // &:hover {
+            //     background-image: url('~m/menu/menu.png');
+            // }
+        }
+        .logo_3m {
+            width: 207px;
+            height: 55px;
+            top: 34px;
+            left: 17px;
+            background-image: url('~m/3m_logo.png');
+        }
+    }
+}

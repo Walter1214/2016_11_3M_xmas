@@ -1,0 +1,244 @@
+.result_bg {
+    .red_tree {
+        display: block;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 170px;
+        position: absolute;
+        left: 0;
+        // top: 50%;
+        bottom: 0;
+        transform: translate(0, -5%);
+        background-image: url('../img/w/message/result/red_tree.png')
+    }
+    .result_space {
+        width: 1000px;
+        // height: 700px;
+        /*border: 1px solid blue;*/
+        position: relative;
+        // margin-top: -25%;
+        margin: 0 auto;
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .title {
+            margin-bottom: 30px;
+            width: 592px;
+            height: 43px;
+            background-image: url('~w/message/result/title.png');
+            display: none;
+        }
+        .left_space {
+            width: 400px;
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            float: left;
+            .pad {
+                display: block;
+                width: 416px;
+                height: 342px;
+                background-position: center;
+                background-size: cover;
+                /*background-image: url('http://3m-xmas2016.azurewebsites.net/Upload/Power/7d51fc3b-50e3-4b33-a876-17b47c395eee.jpg')*/
+            }
+        }
+        .right_space {
+            width: 600px;
+            // position: absolute;
+            // right: 0;
+            // top: 0;
+            padding-top: 75px;
+            /*border: 1px solid yellow;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            float: right;
+            div {
+                color: white;
+                height: 50px;
+                font-size: 20px;
+            }
+            .title {
+                display: block;
+                margin-bottom: 30px;
+                width: 592px;
+                height: 43px;
+                background-image: url('~w/message/result/title.png');
+            }
+            .content_1 {
+                padding-left: 70px;
+                position: relative;
+                width: 100%;
+                div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .fbshare_btn {
+                    display: inline-block;
+                    width: 126px;
+                    height: 37px;
+                    background-image: url('~w/message/result/fbshare_btn.png');
+                }
+                .download_btn {
+                    display: inline-block;
+                    width: 126px;
+                    height: 37px;
+                    background-image: url('~w/message/result/download_btn.png');
+                }
+                .line_btn {
+                    display: none;
+                    background-position: center;
+                    background-size: cover;
+                    width: 204px;
+                    height: 60px;
+                    background-image: url('~m/message/result/line_btn.png');
+                }
+            }
+            .m_content_2 {
+                display: none;
+            }
+            .w_content_2 {
+                // padding-left: 70px;
+                // padding-top: 10px;
+                position: relative;
+                width: 100%;
+                div {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .text {
+                    position: absolute;
+                    top: 10px;
+                    left: 35px;
+                }
+                .prize_btn {
+                    position: absolute;
+                    display: inline-block;
+                    width: 138px;
+                    height: 37px;
+                    top: 2px;
+                    right: -75px;
+                    background-image: url('~w/message/result/prize_btn.png');
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .result_bg {
+        position: relative;
+        .red_tree {
+            top: 83%;
+            transform: translate(0, 5%);
+            height: 208px;
+            background-image: url('~m/message/result/red_tree.png')
+        }
+        .result_space {
+            margin-top: 0;
+            width: 640px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .left_space {
+                position: relative;
+                .pad {
+                    width: 500px;
+                    height: 425px;
+                }
+            }
+            .right_space {
+                div {
+                    font-size: 28px;
+                }
+                position: relative;
+                left: 0px;
+                padding-top: 20px;
+                .title {
+                    display: none;
+                }
+                .content_1 {
+                    margin-top: 20px;
+                    height: 100px;
+                    margin-left: 0;
+                    div {
+                        display: block;
+                    }
+                    .fbshare_btn {
+                        display: inline-block;
+                        width: 204px;
+                        height: 60px;
+                        background-image: url('~m/message/result/fbshare_btn.png');
+                    }
+                    .download_btn {
+                        display: none;
+                    }
+                    .line_btn {
+                        display: inline-block;
+                    }
+                }
+                .w_content_2 {
+                    display: none;
+                }
+                // .d_content_2 {
+                //     margin-top: 20px;
+                //     margin-left: 0;
+                //     height: 80px;
+                //     position: relative;
+                //     div {
+                //         display: block;
+                //     }
+                //     a {
+                //         display: block;
+                //     }
+                //     .prize_btn {
+                //         width: 204px;
+                //         height: 60px;
+                //         background-image: url('~m/message/result/prize_btn.png');
+                //     }
+                // }
+                .m_content_2 {
+                    display: block;
+                    padding-left: 70px;
+                    padding-top: 30px;
+                    // margin-top: 20px;
+                    margin-left: 0;
+                    height: 100px;
+                    position: relative;
+                    width: 100%;
+                    div {
+                        display: block;
+                        // vertical-align: middle;
+                    }
+                    a {
+                        display: block;
+                    }
+                    .text {
+                        top: 10px;
+                        left: 35px;
+                    }
+                    .prize_btn {
+                        display: inline-block;
+                        width: 204px;
+                        height: 60px;
+                        background-image: url('~m/message/result/prize_btn.png');
+                    }
+                }
+            }
+            .title {
+                display: block;
+            }
+        }
+    }
+}

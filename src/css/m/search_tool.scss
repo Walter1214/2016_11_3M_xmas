@@ -1,0 +1,47 @@
+#m_search_tool {
+    position: fixed;
+    width: 89px;
+    height: 89px;
+    z-index: 9;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: #ffd52e;
+    transition: 0.3s;
+    // padding-bottom: 10px;
+    &.ON {
+        width: 100%;
+        background-color: white;
+    }
+    .search_logo {
+        width: 89px;
+        height: 89px;
+        background-position: center;
+        background-size: cover;
+        background-image: url('~m/search/logo_close.png');
+        float: left;
+        &.ON {
+            background-image: url('~m/search/logo_open.png');
+        }
+    }
+    .search_text {
+        font-size: 20px;
+        flex: 2 1;
+        height: 50px;
+        width: calc(100% - 89px - 89px - 65px);
+        // padding: 10px;
+        margin: 10px;
+        // margin-bottom: 10px;
+        float: left;
+        border: 1px solid red;
+        font-size: 28px;
+    }
+    .search_go {
+        margin: 10px 15px 15px 0;
+        height: 67px;
+        width: 89px;
+        flex: 0 0 89px;
+        display: block;
+        background-image: url('~m/search/search_btn.png');
+        float: left;
+    }
+}

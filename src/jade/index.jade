@@ -1,0 +1,47 @@
+doctype
+html
+    head
+        - var devMode = process.env.NODE_ENV  == 'development'
+        - function date_now_format() { var date = new Date(); return date.getFullYear() + "_" + ( date.getMonth() + 1 ) + "_" + date.getDate() + "_" + date.getHours() + "_" + date.getMinutes() + "_" + date.getSeconds();     }
+        - var time = date_now_format();
+        meta(charset='UTF-8')
+        title 3M 聖誕超給勵 祝考更有力
+        meta(name='viewport' content='width=640,user-scalable=no')
+        meta(property="og:title" content="3M 聖誕超給勵 祝考更有力")
+        meta(property="og:description" content="快來一起為身邊的考生打打氣，用3M文具創造最高祝福聖誕樹，還有好禮等你抽抽抽！")
+        meta(name="description" content="快來一起為身邊的考生打打氣，用3M文具創造最高祝福聖誕樹，還有好禮等你抽抽抽！")
+        meta(property="og:image" content="http://3m-event.medialand.com.tw/asset/img/FB_PNG.png")
+        //- link(rel="icon" href="asset/img/favicon.ico")
+        link(rel="shortcut icon" type="image/x-icon" href="asset/img/favicon.ico")
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css')        
+    body
+        #app.wrap
+            app
+
+        if devMode
+            script(src='//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.js')
+            script(src='//cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js')
+            script(src='//cdnjs.cloudflare.com/ajax/libs/vue-router/2.0.0/vue-router.js')
+            script(src='//cdnjs.cloudflare.com/ajax/libs/vuex/2.0.0/vuex.js')
+        - else            
+            script(src='//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js')
+            script(src='//cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js')
+            script(src='//cdnjs.cloudflare.com/ajax/libs/vue-router/2.0.0/vue-router.min.js')
+            script(src='//cdnjs.cloudflare.com/ajax/libs/vuex/2.0.0/vuex.min.js')
+        
+        script(src='//cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js')
+        //- script(src='//connect.facebook.net/zh_TW/sdk.js')
+        script(src="//code.createjs.com/createjs-2015.11.26.min.js")
+        script(src="asset/js/3M_title_2_Canvas.js?_v_=#{time}")
+        //- <!--[if IE]>
+        //- script(src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js")
+        //- <![endif]-->
+        //- <!--[if !IE]>
+        //- script(src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js")
+        //- <![endif]-->
+        //- script(src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js")
+        //- <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-87577248-1', 'auto');ga('send', 'pageview');</script>
+        script(src='asset/js/app.js?_v_=#{time}')
+        script(src="asset/js/html2canvas.js?_v_=#{time}")
+        <script>window.fbAsyncInit = function() {FB.init({    appId      : '1250098541721707',    xfbml      : true,    version    : 'v2.8'});};(function(d, s, id){    var js, fjs = d.getElementsByTagName(s)[0];    if (d.getElementById(id)) {return;}    js = d.createElement(s); js.id = id;    js.src = "//connect.facebook.net/en_US/sdk.js";    fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>     
+        <!-- Facebook Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1854698431412414');fbq('track', 'PageView');</script><noscript><img height="1" width="1"src="https://www.facebook.com/tr?id=1854698431412414&ev=PageView&noscript=1"/></noscript><!-- End Facebook Pixel Code -->

@@ -1,0 +1,156 @@
+.menu_bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('~w/menu/menu_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    position: fixed;
+    .menu_close {
+        position: absolute;
+        display: block;
+        right: 2%;
+        top: 2%;
+        width: 52px;
+        height: 66px;
+        background-image: url('~w/menu/menu_close.png');
+        &:hover {
+            background-image: url('~w/menu/menu_close_hover.png');
+        }
+    }
+    .menu_logo {
+        width: 266px;
+        height: 59px;
+        font-size: 0;
+        background-image: url('~w/menu/logo.png');
+        background-position: center;
+        background-size: cover;
+    }
+    .menu_list {
+        width: 680px;
+        height: 183px;
+        font-size: 0;
+        margin-top: 50px;
+        @for $i from 1 through 4 {
+            .menu_#{$i} {
+                display: inline-block;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 150px;
+                height: 150px;
+                // background-image: url('~w/menu/#{$i}_btn_hover.png');
+                background-image: url('~w/menu/#{$i}_btn.png');
+                background-position: center;
+                background-size: cover;
+                &:hover {
+                    background-image: url('~w/menu/#{$i}_btn_hover.png');
+                }
+            }
+        }
+        .menu_5 {
+            display: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 150px;
+            height: 150px;
+            background-image: url('~w/menu/5_btn.png');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    .share_list {
+        width: 364px;
+        height: 47px;
+        font-size: 0;
+        .share_to_FB {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 114px;
+            height: 47px;
+            background-image: url('~w/menu/fbshare_btn.png');
+            background-position: center;
+            background-size: cover;
+        }
+        .post_Fb {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 177px;
+            height: 47px;
+            background-image: url('~w/menu/fanspage_btn.png');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    @media screen and (max-width: 645px) {
+        .menu_close {
+            width: 32px;
+            height: 33px;
+            top: 34px;
+            right: 33px;
+            background-image: url('~m/menu/menu_close.png');
+            &:hover {
+                background-image: url('~m/menu/menu_close.png');
+            }
+        }
+        .menu_list {
+            width: 445px;
+            height: 665px;
+            font-size: 0;
+            @for $i from 1 through 4 {
+                .menu_#{$i} {
+                    margin: 10px;
+                    width: 200px;
+                    height: 200px;
+                }
+                .menu_5 {
+                    margin: 10px;
+                    width: 200px;
+                    height: 200px;
+                    display: inline-block;
+                }
+            }
+        }
+        .share_list {
+            width: 210px;
+            /*height: 110px;*/
+            font-size: 0;
+            margin-top: -190px;
+            margin-right: -210px;
+            .share_to_FB {
+                display: inline-block;
+                margin: 10px;
+                width: 201px;
+                height: 52px;
+                background-image: url('~m/menu/fbshare_btn.png');
+                background-position: center;
+                background-size: cover;
+            }
+            .post_Fb {
+                display: inline-block;
+                margin: 10px;
+                width: 201px;
+                height: 52px;
+                background-image: url('~m/menu/fanspage_btn.png');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+
+/*.menu_bg {
+    background: red;
+    @media screen and (max-width: 768px) {
+        background: blue;
+    }
+}*/

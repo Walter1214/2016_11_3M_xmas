@@ -1,0 +1,31 @@
+.popup_bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('~w/menu/menu_bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    position: fixed;
+	left: 0;
+	top: 0;
+    /*@media screen and (max-width: 768px) {*/
+    .popup_close {
+        position: absolute;
+        display: block;
+        right: 2%;
+        top: 2%;
+        width: 52px;
+        height: 66px;
+        background-image: url('~w/menu/menu_close.png');
+        &:hover {
+            background-image: url('~w/menu/menu_close_hover.png');
+        }
+    }
+}

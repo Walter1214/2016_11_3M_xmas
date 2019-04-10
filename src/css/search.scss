@@ -1,0 +1,102 @@
+#search_bg {
+    display: block;
+    &>div {
+        margin: 0 auto;
+    }
+    // margin-top: 10%;
+    padding-bottom: 60px;
+    .title {
+        width: 403px;
+        height: 59px;
+        background-image: url('../img/w/search/title.png');
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .text {
+            color: #AB2C2E;
+            font-size: 20px;
+            margin-top: -10px;
+            z-index: 2;
+        }
+    }
+    .search_content {
+        margin-top: -30px;
+        border: 3px solid white;
+        width: 1000px;
+        min-height: 600px;
+        position: relative;
+        .empty_content {
+            color: white;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 25%;
+        }
+        .data_content {
+            img {
+                padding: 50px 50px 0px 50px;
+                width: 395px;
+            }
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            .index_btn {
+                margin: 20px;
+                width: 177px;
+                height: 47px;
+                display: inline-block;
+                background-image: url('../img/w/search/index_btn.png');
+            }
+            .message_btn {
+                margin: 20px;
+                width: 177px;
+                height: 47px;
+                display: inline-block;
+                background-image: url('../img/w/search/message_btn.png');
+            }
+        }
+        .search_tool {
+            position: absolute;
+            right: 20px;
+            top: 35px;
+        }
+    }
+    #m_search_tool {
+        left: 0;
+        bottom: 0;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #search_bg {
+        margin-top: 0;
+        .search_content {
+            width: 540px;
+            min-height: 755px;
+            .empty_content {
+                margin-top: 45%;
+            }
+            .data_content {
+                img {
+                    padding: 73px 73px 0px 73px;
+                    width: 395px;
+                }
+            }
+        }
+        .search_tool {
+            display: none;
+        }
+        #m_search_tool {
+            display: block;
+        }
+    }
+}

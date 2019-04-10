@@ -1,0 +1,15 @@
+{
+    "presets": [
+        [
+            "es2015",
+            {
+                "modules": false
+            }            
+        ]
+    ],
+    "comments": false,
+    "plugins": [
+        "transform-object-rest-spread"
+        // "transform-vue-jsx"
+    ]
+}

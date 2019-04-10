@@ -1,0 +1,155 @@
+#goods_bg {
+    display: block;
+    &>div {
+        margin: 0 auto;
+    }
+    .title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 447px;
+        height: 56px;
+        background-image: url('~w/goods/title.png');
+    }
+    .goods_content {
+        position: relative;
+        // width: 1138px;
+        height: 1425px;
+        width: auto;
+        background-position: center top;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-image: url('../img/w/goods/content_bg.png');
+        .product1 {
+            width: 739px;
+            height: 424px;
+            position: relative;
+            background-image: url('../img/w/goods/product_1.png');
+            a {
+                width: 126px;
+                height: 40px;
+                display: block;
+                // border: 1px solid white;
+                position: absolute;
+                bottom: 0;
+                &.row_1_1 {
+                    left: 90px;
+                }
+                &.row_1_2 {
+                    right: 112px;
+                }
+            }
+        }
+        .product2 {
+            width: 721px;
+            height: 885px;
+            margin-top: 80px;
+            position: relative;
+            background-image: url('../img/w/goods/product_2.png');
+            a {
+                width: 126px;
+                height: 40px;
+                display: block;
+                // border: 1px solid white;
+                position: absolute;
+                &.row_2_1 {
+                    top: 430px;
+                    left: 50px;
+                }
+                &.row_2_2 {
+                    top: 430px;
+                    left: 280px;
+                }
+                &.row_2_3 {
+                    top: 430px;
+                    left: 530px;
+                }
+                &.row_3_1 {
+                    bottom: 0px;
+                    left: 0px;
+                }
+                &.row_3_2 {
+                    bottom: 0px;
+                    left: 185px;
+                }
+                &.row_3_3 {
+                    bottom: 0px;
+                    left: 385px;
+                }
+                &.row_3_4 {
+                    bottom: 0px;
+                    left: 590px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 645px) {
+        .title {
+            margin-top: 0;
+        }
+        .goods_content {
+            width: 540px;
+            height: 3635px;
+            background-image: url('../img/m/goods/product.png');
+            .product1 {
+                width: 200px;
+                height: 1155px;
+                /*border: 1px solid blue;*/
+                background-image: none;
+                a {
+                    width: 200px;
+                    height: 80px;
+                    &.row_1_1 {
+                        bottom: 500px;
+                        left: 0;
+                    }
+                    &.row_1_2 {
+                        bottom: 35px;
+                        left: 0;
+                    }
+                }
+            }
+            .product2 {
+                margin-top: 0px;
+                width: 350px;
+                height: 2560px;
+                /*border: 1px solid yellow;*/
+                background-image: none;
+                a {
+                    width: 200px;
+                    height: 80px;
+                    &.row_2_1 {
+                        top: 520px;
+                        left: 145px;
+                    }
+                    &.row_2_2 {
+                        top: 840px;
+                        left: 145px;
+                    }
+                    &.row_2_3 {
+                        top: 1150px;
+                        left: 145px;
+                    }
+                    &.row_3_1 {
+                        bottom: 920px;
+                        left: 130px;
+                    }
+                    &.row_3_2 {
+                        bottom: 650px;
+                        left: 130px;
+                    }
+                    &.row_3_3 {
+                        bottom: 390px;
+                        left: 130px;
+                    }
+                    &.row_3_4 {
+                        bottom: 130px;
+                        left: 130px;
+                    }
+                }
+            }
+        }
+    }
+}

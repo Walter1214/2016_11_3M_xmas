@@ -1,0 +1,1 @@
+require('file-loader?name=[path][name].[ext]!../img/w/index_btn.png');

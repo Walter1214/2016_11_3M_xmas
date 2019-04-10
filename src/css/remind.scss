@@ -1,0 +1,42 @@
+.remind_bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('~m/remind/pg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    position: fixed;
+    .remind_close {
+        position: absolute;
+        display: block;
+        top: 34px;
+        right: 33px;
+        width: 32px;
+        height: 33px;
+        background-image: url('~m/remind/close.png');
+        // &:hover {
+        //     background-image: url('~w/menu/menu_close_hover.png');
+        // }
+    }
+    .content {
+        display: block;
+        width: 547px;
+        height: 571px;
+        background-image: url('~m/remind/content.png');
+    }
+    .btn {
+        margin-top: 60px;
+        background-repeat: no-repeat;
+        display: block;
+        width: 204px;
+        height: 60px;
+        background-image: url('~m/remind/btn.png');
+    }
+}

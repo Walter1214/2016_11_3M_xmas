@@ -1,0 +1,73 @@
+#list_bg {
+    .title {
+        // margin-top: 20px;
+        margin: 20px auto 0;
+        position: relative;
+        // width: 250px;
+        width: 848px;
+        height: 56px;
+        background: url('~w/list/title.png') no-repeat center center;
+        flex: none;
+        .list_btn {
+            width: 126px;
+            height: 37px;
+            // margin-top: -2%;
+            // margin-right: -40%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-image: url('../img/w/list/rule_btn.png');
+            flex: none;
+        }
+    }
+    .list_space {
+        // margin-top: 30px;
+        margin: 30px auto 0;
+        width: 848px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: #AB2C2E;
+        .content {
+            margin: 30px auto;
+            width: 557px;
+            height: 243px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('../img/w/list/content.png');
+        }
+    }
+    @media screen and (max-width: 645px) {
+        >div {
+            margin: 0 auto;
+        }
+        .title {
+            width: 312px;
+            height: 70px;
+            margin-top: 0;
+            margin-right: 230px;
+            padding-right: 20px;
+            background-repeat: no-repeat;
+            background-image: url('~m/list/title.png');
+            .list_btn {
+                position: absolute;
+                left: 345px;
+                top: 10px;
+                width: 169px;
+                height: 45px;
+                margin-top: 0;
+                margin-right: 0;
+                background-image: url('~m/list/rule_btn.png');
+            }
+        }
+        .list_space {
+            width: 540px;
+            .content {
+                width: 484px;
+                height: 397px;
+                background-image: url('../img/m/list/content.png');
+            }
+        }
+    }
+}

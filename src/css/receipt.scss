@@ -1,0 +1,266 @@
+#receipt_bg {
+    .title {
+        // margin-top: 50px;
+        // margin-bottom: 30px;
+        margin: 50px auto 30px;
+        width: 250px;
+        height: 56px;
+        background-image: url('~w/receipt/title.png');
+    }
+    .receipt_space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 788px;
+        padding-bottom: 30px;
+        background-color: #AB2C2E;
+        margin: 0 auto;
+        .text {
+            display: block;
+            width: 464px;
+            height: 93px;
+            margin-bottom: 20px;
+            margin-top: -25px;
+            background-image: url('~w/receipt/text.png');
+        }
+        .line {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 2px;
+            background-image: url('~w/receipt/line.png');
+        }
+        ul.content_1 {
+            font-size: 16px;
+            // position: relative;
+            color: white;
+            li {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                &:before {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: #fff;
+                    margin-right: 8px;
+                }
+                input {
+                    font-size: 16px;
+                    height: 35px;
+                }
+                .invoice_str {
+                    width: 65px;
+                    vertical-align: middle;
+                }
+                .invoice_int {
+                    width: 200px;
+                    vertical-align: middle;
+                }
+                &.title_1 {
+                    display: none;
+                }
+                .new {
+                    padding-left: 10px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    background-image: url('~w/receipt/add_btn.png');
+                    height: 33px;
+                    width: 33px;
+                    vertical-align: middle;
+                    &:hover {
+                        background-image: url('~w/receipt/add_hover.png');
+                    }
+                }
+            }
+        }
+        ul.content_2 {
+            position: relative;
+            font-size: 16px;
+            color: white;
+            width: 750px;
+            margin: 20px;
+            li {
+                width: 360px;
+                margin: 20px auto;
+                display: inline-block;
+                &:before {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: #fff;
+                    margin-right: 8px;
+                }
+                label {
+                    display: inline-block;
+                    width: 75px;
+                }
+                input[type="text"] {
+                    height: 35px;
+                    width: 245px;
+                }
+                &.title_2 {
+                    display: none;
+                }
+                &.captcha_place {
+                    input[type="text"] {
+                        width: 130px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    img {
+                        width: 110px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                &.read_place {
+                    width: 100%;
+                    font-size: 12px;
+                    margin-left: 80px;
+                    label {
+                        display: inline;
+                        >a {
+                            color: white;
+                        }
+                    }
+                    input[type="checkbox"] {
+                        background-color: #AB2C2E;
+                    }
+                    &:before {
+                        width: 0;
+                        height: 0;
+                    }
+                }
+            }
+        }
+        .receipt_btn {
+            width: 126px;
+            height: 37px;
+            display: block;
+            background-image: url('~w/receipt/btn.png');
+        }
+    }
+    @media screen and (max-width: 645px) {
+        >div {
+            margin: 0 auto;
+        }
+        .title {
+            margin-top: 0;
+            margin-bottom: 22px;
+            width: 312px;
+            height: 70px;
+            background-image: url('~m/receipt/title.png');
+        }
+        .receipt_space {
+            width: 540px;
+            .text {
+                width: 469px;
+                height: 26px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                background-image: url('~m/receipt/text.png');
+            }
+            ul.content_1 {
+                li {
+                    width: 500px;
+                    .invoice_str {
+                        width: 55px;
+                        height: 55px;
+                        font-size: 26px;
+                    }
+                    .invoice_int {
+                        width: 270px;
+                        height: 55px;
+                        font-size: 26px;
+                    }
+                    &:before {
+                        width: 0;
+                        height: 0;
+                    }
+                    label {
+                        display: none;
+                    }
+                    &.title_1 {
+                        display: block;
+                    }
+                    .new {
+                        width: 51px;
+                        height: 51px;
+                        background-image: url('~m/receipt/add.png');
+                        &:hover {
+                            background-image: url('~m/receipt/add.png');
+                        }
+                    }
+                }
+            }
+            .line {
+                width: 85%;
+            }
+            ul.content_2 {
+                li {
+                    width: 500px;
+                    display: block;
+                    input[type="text"] {
+                        height: 55px;
+                        width: 325px;
+                        font-size: 30px;
+                    }
+                    label {
+                        padding-right: 5px;
+                        width: 120px;
+                        font-size: 30px;
+                    }
+                    &:before {
+                        width: 0;
+                        height: 0;
+                    }
+                    &.read_place {
+                        width: 500px;
+                        text-indent: -38px;
+                        padding-left: 38px;
+                        margin: 0 auto;
+                        line-height: 25px;
+                        input[type="checkbox"] {
+                            width: 19px;
+                            height: 19px;
+                        }
+                        label {
+                            width: 450px;
+                            font-size: 22px;
+                            display: inline;
+                        }
+                    }
+                    &.captcha_place {
+                        input[type="text"] {
+                            width: 125px;
+                            display: inline-block;
+                        }
+                        >label {
+                            padding-left: 2px;
+                        }
+                        img {
+                            width: 184px;
+                            margin-left: 10px;
+                            display: inline-block;
+                        }
+                    }
+                    &.title_2 {
+                        display: block;
+                    }
+                }
+            }
+            .receipt_btn {
+                width: 201px;
+                height: 60px;
+                background-image: url('~m/message/prize/pdsend_btn.png');
+            }
+        }
+    }
+}

@@ -1,0 +1,207 @@
+#prize_bg {
+    .title {
+        // margin-top: 50px;
+        // margin-bottom: 30px;
+        margin: 50px auto 30px;
+        width: 250px;
+        height: 56px;
+        background-image: url('~w/message/prize/title.png');
+    }
+    .prize_space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 788px;
+        padding-bottom: 30px;
+        background-color: #AB2C2E;
+        margin: 0 auto;
+        .one_title {
+            width: 279px;
+            height: 28px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background-image: url('~w/message/prize/one_title.png');
+        }
+        .coupon_btn {
+            width: 113px;
+            height: 37px;
+            display: inline-block;
+            background-image: url('~w/message/prize/coupon_btn.png');
+        }
+        .line {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 731px;
+            height: 2px;
+            background-image: url('~w/receipt/line.png');
+        }
+        .two_title {
+            width: 660px;
+            height: 95px;
+            margin-top: 20px;
+            background-image: url('~w/message/prize/two_title.png');
+        }
+        ul.content_2 {
+            position: relative;
+            font-size: 16px;
+            color: white;
+            width: 731px;
+            margin: 20px auto;
+            li {
+                width: 360px;
+                margin: 10px auto;
+                display: inline-block;
+                &:before {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: #fff;
+                    margin-right: 8px;
+                }
+                label {
+                    display: inline-block;
+                    width: 75px;
+                    vertical-align: middle;
+                }
+                input[type="text"] {
+                    height: 35px;
+                    width: 245px;
+                    font-size: 17px;
+                }
+                &.captcha_place {
+                    input[type="text"] {
+                        width: 130px;
+                        vertical-align: middle
+                    }
+                    img {
+                        width: 110px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                &.read_place {
+                    padding-left: 82px;
+                    width: 100%;
+                    font-size: 12px;
+                    label {
+                        display: inline;
+                        >a {
+                            color: white;
+                        }
+                    }
+                    input[type="checkbox"] {
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-color: #AB2C2E;
+                        width: 19px;
+                        height: 19px;
+                    }
+                    &:before {
+                        width: 0;
+                        height: 0;
+                    }
+                }
+            }
+        }
+        .pdsend_btn {
+            width: 126px;
+            height: 37px;
+            display: block;
+            background-image: url('~w/message/prize/pdsend_btn.png');
+        }
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #prize_bg {
+        display: block;
+        >div {
+            margin: 0 auto;
+        }
+        .title {
+            margin-top: 0;
+            width: 312px;
+            height: 70px;
+            background-image: url('~m/message/prize/title.png');
+        }
+        .prize_space {
+            width: 540px;
+            margin-bottom: 75px;
+            padding-top: 45px;
+            padding-bottom: 60px;
+            .one_title {
+                width: 219px;
+                height: 80px;
+                background-image: url('~m/message/prize/one_title.png');
+            }
+            .coupon_btn {
+                width: 186px;
+                height: 60px;
+                background-image: url('~m/message/prize/coupon_btn.png');
+            }
+            .line {
+                width: 540px;
+            }
+            .two_title {
+                width: 455px;
+                height: 278px;
+                margin-top: 0;
+                background-position: center;
+                background-size: cover;
+                background-image: url('~m/message/prize/two_title.png');
+            }
+            ul.content_2 {
+                width: 100%;
+                li {
+                    width: 500px;
+                    padding: 10px 0;
+                    margin: 0 auto;
+                    display: block;
+                    input[type="text"] {
+                        font-size: 28px;
+                        width: 330px;
+                        height: 50px;
+                    }
+                    label {
+                        width: 120px;
+                        font-size: 28px;
+                    }
+                    &:before {
+                        width: 0;
+                        height: 0;
+                    }
+                    &.captcha_place {
+                        input[type="text"] {
+                            width: 170px;
+                        }
+                        img {
+                            width: 150px;
+                            margin-left: 10px;
+                        }
+                    }
+                    &.read_place {
+                        text-indent: -38px;
+                        padding-left: 38px;
+                        width: 500px;
+                        height: 50px;
+                        label {
+                            line-height: 38px;
+                            font-size: 20px;
+                            width: 450px;
+                            display: inline;
+                        }
+                    }
+                }
+            }
+            .pdsend_btn {
+                width: 201px;
+                height: 60px;
+                background-image: url('~m/message/prize/pdsend_btn.png');
+            }
+        }
+    }
+}

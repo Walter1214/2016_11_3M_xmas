@@ -1,0 +1,455 @@
+#message_bg {
+    padding-bottom: 100px;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    @keyframes example {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .m_img {
+        display: none;
+        padding-top: 65px;
+        padding-bottom: 20px;
+    }
+    .big_pad {
+        width: 630px;
+        height: 630px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        // transform: translate(-50%, -50%);
+        font-size: 30px;
+        letter-spacing: -0.5px;
+        font-weight: bold;
+        z-index: -10;
+        animation-name: example;
+        animation-duration: 120s;
+        @for $i from 1 through 5 {
+            &.big_pad_#{$i}_green {
+                background-image: url('~w/message/big_#{$i}_green.png');
+                @if $i==1 {
+                    color: #fffd50;
+                }
+                @else {
+                    color: #fffffb;
+                }
+            }
+            &.big_pad_#{$i}_yellow {
+                background-image: url('~w/message/big_#{$i}_yellow.png');
+                color: #AB2C2E;
+            }
+        }
+        /*div {
+            border: 1px solid blue;
+        }*/
+        .big_subject {
+            position: absolute;
+            width: 120px;
+            height: 35px;
+            line-height: 35px;
+            top: 167px;
+            left: 203px;
+            text-align: center;
+        }
+        .big_name {
+            text-align: center;
+            line-height: 35px;
+            position: absolute;
+            width: 198px;
+            height: 35px;
+            top: 167px;
+            right: 94px;
+        }
+        .big_comment {
+            line-height: 45px;
+            padding: 15px 26px;
+            letter-spacing: 1px;
+            position: absolute;
+            width: 410px;
+            height: 160px;
+            top: 238px;
+            left: 85px;
+            font-size: 27px;
+            word-break: break-all;
+        }
+    }
+    .message_space {
+        width: 1000px;
+        /*border: 1px solid blue;*/
+        position: relative;
+        // margin-top: -25%;
+        margin: 0 auto;
+        .left_space {
+            width: 420px;
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            float: left;
+            .pad {
+                position: relative;
+                display: block;
+                width: 416px;
+                height: 342px;
+                font-size: 17px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                /*border: 1px solid black;*/
+                @for $i from 1 through 5 {
+                    &.pad_#{$i}_green {
+                        background-image: url('~w/message/#{$i}_green.png');
+                        @if $i==1 {
+                            color: #fffd50;
+                        }
+                        @else {
+                            color: #fffffb;
+                        }
+                    }
+                    &.pad_#{$i}_yellow {
+                        background-image: url('~w/message/#{$i}_yellow.png');
+                        color: #AB2C2E;
+                    }
+                }
+                .small_subject {
+                    position: absolute;
+                    width: 75px;
+                    height: 25px;
+                    line-height: 25px;
+                    top: 68px;
+                    left: 132px;
+                    text-align: center;
+                }
+                .small_name {
+                    text-align: center;
+                    line-height: 25px;
+                    position: absolute;
+                    width: 115px;
+                    height: 25px;
+                    top: 68px;
+                    right: 77px;
+                }
+                .small_comment {
+                    line-height: 30px;
+                    padding: 8px 17px;
+                    position: absolute;
+                    width: 266px;
+                    height: 107px;
+                    top: 113px;
+                    left: 55px;
+                    font-size: 19px;
+                    word-break: break-all;
+                    // border: 1px solid red;
+                    letter-spacing: 0;
+                }
+            }
+            .color_list {
+                position: relative;
+                width: 346px;
+                height: 47px;
+                background-image: url('~w/message/box_text.png');
+                .green {
+                    display: inline-block;
+                    width: 23px;
+                    height: 23px;
+                    position: absolute;
+                    right: 100px;
+                    top: 10px;
+                    background-image: url('~w/message/box.png');
+                    background-repeat: no-repeat;
+                    background-position: 0 0;
+                    &.ON {
+                        background-position-y: -23px;
+                    }
+                }
+                .yellow {
+                    display: inline-block;
+                    width: 23px;
+                    height: 23px;
+                    position: absolute;
+                    right: 65px;
+                    top: 10px;
+                    background-image: url('~w/message/box.png');
+                    background-repeat: no-repeat;
+                    background-position: -23px 0;
+                    &.ON {
+                        background-position-y: -23px;
+                    }
+                }
+            }
+            .m_color_list {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                /*border: 1px solid blue;*/
+                .green {
+                    display: inline-block;
+                    width: 79px;
+                    height: 158px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(0, -70%);
+                    background-image: url('~m/message/color_btn.png');
+                    background-repeat: no-repeat;
+                    background-position: -80px 0;
+                    &.ON {
+                        background-position-y: -159px;
+                    }
+                }
+                .yellow {
+                    display: inline-block;
+                    width: 79px;
+                    height: 158px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0, -70%);
+                    background-image: url('~m/message/color_btn.png');
+                    background-repeat: no-repeat;
+                    background-position: 0 -159px;
+                    &.ON {
+                        background-position-y: 0;
+                    }
+                }
+            }
+            .m_send_btn {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 445px;
+                height: 79px;
+                background-image: url('~m/message/send_btn.png');
+                background-size: cover;
+                background-position: center;
+                z-index: 5;
+                display: none;
+            }
+        }
+        .right_space {
+            width: 540px;
+            // position: absolute;
+            // right: 0;
+            // top: 0;
+            /*border: 1px solid yellow;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            float: right;
+            .top_space {
+                .m_div {
+                    display: inline-block;
+                }
+                width: 100%;
+                font-size: 20px;
+                label {
+                    color: #ffd52e;
+                    vertical-align: middle;
+                }
+                input[type="text"] {
+                    background-color: rgba(171, 44, 46, 0.54);
+                    height: 25px;
+                    // background-color: rgba(199, 61, 63, 0.2);
+                    border: none;
+                    width: 190px;
+                    // border-bottom: 1px solid #b42e2f;
+                    // color: #ffd52e
+                    color: white;
+                    font-size: 17px;
+                    vertical-align: middle;
+                    &::placeholder {
+                        // color: #ffd52e;
+                        color: white;
+                        font-size: 15px;
+                        opacity: 0.5;
+                    }
+                }
+            }
+            #comment {
+                margin-top: 30px;
+                width: calc(100% - 50px);
+                background-color: rgb(184, 44, 46);
+                border: none;
+                // color: #ffd52e;
+                color: white;
+                font-size: 20px;
+                height: 200px;
+                padding: 20px 25px;
+                &::placeholder {
+                    // color: #ffd52e;
+                    color: white;
+                    font-size: 20px;
+                    opacity: 0.5;
+                }
+            }
+            .line {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 540px;
+                height: 19px;
+                background-image: url('~w/message/text.png');
+            }
+            .message_list {
+                width: 540px;
+                height: 118px;
+                font-size: 0;
+                .list {
+                    display: inline-block;
+                    width: 107px;
+                    height: 118px;
+                    background-image: url('~w/message/list.png');
+                    background-repeat: no-repeat;
+                    @for $i from 1 through 5 {
+                        &.list_#{$i} {
+                            background-position: calc(108px - 108px*#{$i}) 0px;
+                        }
+                    }
+                    &.ON {
+                        background-image: url('~w/message/list_choose.png');
+                    }
+                }
+            }
+            .send_btn {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 126px;
+                height: 37px;
+                display: block;
+                background-image: url('~w/message/send_btn.png');
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #message_bg {
+        display: block;
+        .big_pad {
+            top: 200px;
+        }
+        .m_img {
+            display: block;
+        }
+        .message_space {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 1420px;
+            .left_space {
+                width: 640px;
+                order: 2;
+                position: relative;
+                .m_color_list {
+                    display: inline-block;
+                }
+                .color_list {
+                    display: none;
+                }
+                .m_send_btn {
+                    display: block;
+                }
+                .pad {
+                    width: 511px;
+                    height: 420px;
+                    font-size: 23px;
+                    background-size: cover;
+                    background-position: center;
+                    .small_subject {
+                        width: 98px;
+                        height: 25px;
+                        line-height: 25px;
+                        top: 85px;
+                        left: 159px;
+                    }
+                    .small_name {
+                        line-height: 25px;
+                        width: 145px;
+                        height: 25px;
+                        top: 85px;
+                        right: 89px;
+                    }
+                    .small_comment {
+                        line-height: 35px;
+                        padding: 8px 17px;
+                        width: 333px;
+                        height: 135px;
+                        top: 140px;
+                        left: 68px;
+                        font-size: 23px;
+                        // border: 1px solid red;
+                    }
+                }
+            }
+            .right_space {
+                order: 1;
+                position: relative;
+                .top_space {
+                    font-size: 26px;
+                    line-height: 60px;
+                    .m_div {
+                        display: block;
+                        text-align: center;
+                        // margin-bottom: 10px;
+                    }
+                    input[type="text"] {
+                        padding: 0;
+                        font-size: 26px;
+                        height: 40px;
+                        width: 320px;
+                        &::placeholder {
+                            padding: 0;
+                            font-size: 26px;
+                        }
+                    }
+                }
+                #comment {
+                    font-size: 26px;
+                    &::placeholder {
+                        font-size: 26px;
+                    }
+                }
+                .line {
+                    display: none;
+                }
+                .send_btn {
+                    display: none;
+                }
+                .message_list {
+                    height: 142px;
+                    .list {
+                        height: 142px;
+                        background-image: url('~m/message/list.png');
+                        @for $i from 1 through 5 {
+                            &.list_#{$i} {
+                                background-position: calc(108px - 108px*#{$i}) 0px;
+                            }
+                        }
+                        &.ON {
+                            background-image: url('~m/message/list_choose.png');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
